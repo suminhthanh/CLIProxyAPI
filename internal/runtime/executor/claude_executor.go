@@ -737,7 +737,7 @@ func applyClaudeHeaders(r *http.Request, auth *cliproxyauth.Auth, apiKey string,
 	misc.EnsureHeader(r.Header, ginHeaders, "X-Stainless-Arch", mapStainlessArch())
 	misc.EnsureHeader(r.Header, ginHeaders, "X-Stainless-Os", mapStainlessOS())
 	misc.EnsureHeader(r.Header, ginHeaders, "X-Stainless-Timeout", hdrDefault(hd.Timeout, "600"))
-	misc.EnsureHeader(r.Header, ginHeaders, "User-Agent", hdrDefault(hd.UserAgent, "claude-cli/2.1.44 (external, sdk-cli)"))
+	misc.EnsureHeader(r.Header, ginHeaders, "User-Agent", "claude-cli/2.1.44 (external, sdk-cli)")
 	r.Header.Set("Connection", "keep-alive")
 	r.Header.Set("Accept-Encoding", "gzip, deflate, br, zstd")
 	if stream {
