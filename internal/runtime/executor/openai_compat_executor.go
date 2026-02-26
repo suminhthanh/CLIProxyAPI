@@ -117,7 +117,7 @@ func (e *OpenAICompatExecutor) Execute(ctx context.Context, auth *cliproxyauth.A
 	if apiKey != "" {
 		httpReq.Header.Set("Authorization", "Bearer "+apiKey)
 	}
-	httpReq.Header.Set("User-Agent", "cli-proxy-openai-compat")
+	httpReq.Header.Set("User-Agent", "claude-cli/2.1.44 (external, sdk-cli)")
 	var attrs map[string]string
 	if auth != nil {
 		attrs = auth.Attributes
@@ -214,7 +214,7 @@ func (e *OpenAICompatExecutor) ExecuteStream(ctx context.Context, auth *cliproxy
 	if apiKey != "" {
 		httpReq.Header.Set("Authorization", "Bearer "+apiKey)
 	}
-	httpReq.Header.Set("User-Agent", "cli-proxy-openai-compat")
+	httpReq.Header.Set("User-Agent", "claude-cli/2.1.44 (external, sdk-cli)")
 	var attrs map[string]string
 	if auth != nil {
 		attrs = auth.Attributes
